@@ -3,6 +3,7 @@
     "files.insertFinalNewline": true,
     "editor.formatOnSave": false,
     "python.linting.pylintArgs": [
-        "--load-plugins=pylint_django"
+        "--load-plugins=pylint_django",
+        "--errors-only"
     ]
 }
