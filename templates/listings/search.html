@@ -6,7 +6,7 @@
         <div class="container">
           <div class="row text-center">
             <div class="col-md-12">
-              <form action="search.html">
+              <form action="{% url 'search'%}">
                 <!-- Form Row 1 -->
                 <div class="form-row">
                   <div class="col-md-4 mb-3">
@@ -77,17 +77,17 @@
       <!-- Listings -->
       <section id="listings" class="py-4">
         <div class="container">
-                <div class="row">
-                        {% if listings %}
-                          {% for listing in listings %}
-                            {% include 'listings/_listing_card.html' %}
-                          {% endfor%}
-                        {% else %}
-                        <div class="col-md-12">
-                          <p>No Listings Available</p>
-                        </div>
-                        {% endif%}
-                      </div>
+            <div class="row">
+                {% if listings %}
+                    {% for listing in listings %}
+                    {% include 'listings/_listing_card.html' %}
+                    {% endfor%}
+                {% else %}
+                <div class="col-md-12">
+                    <p>No Listings Available</p>
+                </div>
+                {% endif%}
+            </div>
         </div>
       </section>
 {% endblock %}
