@@ -15,7 +15,7 @@
     <!-- Custom -->
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
 
-    <title>BT Real Estate</title>
+    <title>BT Real Estate {% block title%}{%endblock%}</title>
 </head>
 
 <body>
@@ -26,8 +26,7 @@
     <!-- Nav Bar -->
     {% include 'partials/_navbar.html' %}
 
-    <!--Alerts-->
-    {%include 'partials/_alerts.html'%}
+    
 
     {% block content %} {% endblock %}
 
